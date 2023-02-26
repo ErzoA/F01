@@ -116,10 +116,8 @@ async def start_command(client: Client, message: Message):
     else:
         buttons = [
             [InlineKeyboardButton("About Me", callback_data="about")],
-            
-            [
-                InlineKeyboardButton("Close", callback_data="close"),
-            ],
+            [InlineKeyboardButton("Help", callback_data="help")],
+            [InlineKeyboardButton("Close", callback_data="close"),],
         ]
         await message.reply_text(
             text=START_MSG.format(
