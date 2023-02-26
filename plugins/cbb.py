@@ -19,13 +19,13 @@ async def cb_handler(client: Bot, query: CallbackQuery):
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Close", callback_data="close")]]
             ),
- 
+        )
 @Bot.on_callback_query()
 async def cb_handler(client: Bot, query: CallbackQuery):
     data = query.data
     if data == "help":
         await query.message.edit_text(
-            text=f"<b>Tentang Bot ini:\n\n • /users Cek Pengguna menggunakan bot ini\n • /broadcast :Pesan Siaran\n • /ping :Pinger\n • /uptime :Waktu Hidup Bot</b>\n",
+            text=f"<b>Perintah Bot:\n\n • /users Cek Pengguna menggunakan bot ini\n • /broadcast :Pesan Siaran\n • /ping :Pinger\n • /uptime :Waktu Hidup Bot</b>\n",
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [[InlineKeyboardButton("Close", callback_data="close")]]
