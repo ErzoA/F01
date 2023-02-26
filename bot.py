@@ -104,7 +104,7 @@ class Bot(Client):
                 )
                 sys.exit()
                 
-          if FORCE_SUB_GROUP1:
+        if FORCE_SUB_GROUP1:
             try:
                 link = await self.export_chat_invite_link(FORCE_SUB_GROUP1)
                 self.invitelink4 = link
@@ -114,13 +114,12 @@ class Bot(Client):
                     "Bot tidak dapat Mengambil link Undangan dari FORCE_SUB_GROUP1!"
                 )
                 self.LOGGER(__name__).warning(
-                    f"Silakan periksa kembali var FORCE_SUB_GROUP dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Group Saat Ini: {FORCE_SUB_GROUP}"
+                    f"Silakan periksa kembali var FORCE_SUB_GROUP1 dan Pastikan Bot anda Admin di Channel dengan izin link invite Pengguna melalui link undangan, Subs Group Saat Ini: {FORCE_SUB_GROUP}"
                 )
                 self.LOGGER(__name__).info(
                     "\nBot Berhenti. https://t.me/AboutWiki untuk Bantuan"
                 )
                 sys.exit()
-                
         
         self.set_parse_mode("html")
         self.LOGGER(__name__).info(
