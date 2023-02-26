@@ -116,14 +116,7 @@ async def start_command(client: Client, message: Message):
     else:
         buttons = [
             [InlineKeyboardButton(" ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ ", callback_data="about")],
-            [
-                InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ•", url=client.invitelink),
-                InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ•", url=client.invitelink2),
-            ],
-            [
-                InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ•", url=client.invitelink3),
-                
-            ],  
+            
             [
                 InlineKeyboardButton(" ᴛᴜᴛᴜᴘ ", callback_data="close"),
             ],
@@ -152,11 +145,11 @@ async def start_command(client: Client, message: Message):
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ•", url=client.invitelink), 
-            InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ•", url=client.invitelink2),
+            InlineKeyboardButton("**Join Dulu**", url=client.invitelink), 
+            InlineKeyboardButton("**Join Dulu**", url=client.invitelink2),
         ],
         [
-            InlineKeyboardButton("•ᴄʜᴀɴɴᴇʟ•", url=client.invitelink3), 
+            InlineKeyboardButton("**Join Dulu**", url=client.invitelink3), 
             
         ],
     ]
@@ -164,7 +157,7 @@ async def not_joined(client: Client, message: Message):
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text=" Coba Lagi Tod ",
+                    text="Coba Lagi Pler",
                     url=f"https://t.me/{client.username}?start={message.command[1]}",
                 )
             ]
