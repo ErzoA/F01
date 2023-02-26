@@ -76,11 +76,11 @@ async def start_command(client: Client, message: Message):
                 ids = [int(int(argument[1]) / abs(client.db_channel.id))]
             except BaseException:
                 return
-        temp_msg = await message.reply("<code>Tunggu Sebentar...</code>")
+        temp_msg = await message.reply("<code>Bentar lagi ambil video...</code>")
         try:
             messages = await get_messages(client, ids)
         except BaseException:
-            await message.reply_text("<b>Telah Terjadi Error </b>🥴")
+            await message.reply_text("<b>Loh Error </b>🥴")
             return
         await temp_msg.delete()
 
@@ -115,10 +115,10 @@ async def start_command(client: Client, message: Message):
                 pass
     else:
         buttons = [
-            [InlineKeyboardButton(" ᴛᴇɴᴛᴀɴɢ sᴀʏᴀ ", callback_data="about")],
+            [InlineKeyboardButton("About Me", callback_data="about")],
             
             [
-                InlineKeyboardButton(" ᴛᴜᴛᴜᴘ ", callback_data="close"),
+                InlineKeyboardButton("Close", callback_data="close"),
             ],
         ]
         await message.reply_text(
@@ -145,19 +145,19 @@ async def start_command(client: Client, message: Message):
 async def not_joined(client: Client, message: Message):
     buttons = [
         [
-            InlineKeyboardButton("**Join Dulu**", url=client.invitelink), 
-            InlineKeyboardButton("**Join Dulu**", url=client.invitelink2),
+            InlineKeyboardButton("Join Dulu", url=client.invitelink), 
+            InlineKeyboardButton("Join Dulu", url=client.invitelink2),
         ],
         [
-            InlineKeyboardButton("**Join Dulu**", url=client.invitelink3),
-            InlineKeyboardButton("**Join Dulu**", url=client.invitelink4), 
+            InlineKeyboardButton("Join Dulu", url=client.invitelink3),
+            InlineKeyboardButton("Join Dulu", url=client.invitelink4), 
         ],
     ]
     try:
         buttons.append(
             [
                 InlineKeyboardButton(
-                    text="Coba Lagi Pler",
+                    text="Coba Lagi ler",
                     url=f"https://t.me/{client.username}?start={message.command[1]}",
                 )
             ]
