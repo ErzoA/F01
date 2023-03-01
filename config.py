@@ -34,7 +34,7 @@ CHANNEL = os.environ.get("CHANNEL", "chnlwiki")
 GROUP = os.environ.get("GROUP", "AboutWiki")
 
 # ID dari Channel Atau Group Untuk Wajib Subscribenya
-FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001721038526"))
+FORCE_SUB_CHANNEL = int(os.environ.get("FORCE_SUB_CHANNEL", "-1001525776016"))
 FORCE_SUB_GROUP = int(os.environ.get("FORCE_SUB_GROUP", "-1001508910413"))
 
 # ID dari Channel Atau Group Untuk Wajib Subscribenya
